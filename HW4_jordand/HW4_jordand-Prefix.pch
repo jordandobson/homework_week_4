@@ -7,3 +7,18 @@
 #ifdef __OBJC__
     #import <Cocoa/Cocoa.h>
 #endif
+
+
+// DLog()
+// DMethodLog()
+// DThreadLog()
+
+#ifdef DEBUG
+#define DLog(...) NSLog(@"%s (line %d) %@", __PRETTY_FUNCTION__, __LINE__, [NSString stringWithFormat:__VA_ARGS__]);
+#define DThreadLog() NSLog(@"%s (line %d) %@", __PRETTY_FUNCTION__, __LINE__, [NSThread currentThread])
+#define DMethodLog() NSLog(@"%s (line %d)", __PRETTY_FUNCTION__, __LINE__)
+#else
+#define DLog(...)
+#define DThreadLog()
+#define DMethodLog()
+#endif

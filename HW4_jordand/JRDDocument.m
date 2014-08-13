@@ -7,53 +7,108 @@
 //
 
 #import "JRDDocument.h"
+#import "JRDWindowController.h"
+#import "JRDTodoList.h"
+
+
+/////////////////////////////////////////////
+//                                         //
+//  THIS FILE IS ALL DOCUMENT LEVEL STUFF  //
+//                                         //
+/////////////////////////////////////////////
+
+
+// Setup Vars for List and Window
+
+@interface JRDDocument ()
+    @property (strong, nonatomic) JRDTodoList         *todoList;
+    @property (strong, nonatomic) JRDWindowController *docWindowController;
+@end
+
 
 @implementation JRDDocument
 
 - (id)init
 {
+    DLog(@"Document Initialized With New List");
+
     self = [super init];
     if (self) {
-        // Add your subclass-specific initialization here.
+        self.todoList = [JRDTodoList new];
+        //self.todoList = [JRDTodoList beginTheDayList];
+        NSLog(@"%@",self.todoList);
     }
     return self;
 }
 
-- (NSString *)windowNibName
+// Recieve Updates to the data via a delegate
+
+-(void)makeWindowControllers
 {
-    // Override returning the nib file name of the document
-    // If you need to use a subclass of NSWindowController or if your document supports multiple NSWindowControllers, you should remove this method and override -makeWindowControllers instead.
-    return @"JRDDocument";
+    DLog(@"Making Window Controllers");
+    
+    if(!self.docWindowController){
+        // Create Instance of Window Contorller
+        // Send controller a pointer to the list
+        self.docWindowController = [JRDWindowController notableCollectionWindowControllerWithList: self.todoList];
+    }
+
+    [self addWindowController: self.docWindowController];
+
+    // Perform Any Setup
+    // Setup calling methods in the controller class to manipulate UI
+    //
+    [self.docWindowController showWindow: self];
+
 }
 
-- (void)windowControllerDidLoadNib:(NSWindowController *)aController
-{
-    [super windowControllerDidLoadNib:aController];
-    // Add any code here that needs to be executed once the windowController has loaded the document's window.
-}
+#pragma mark Saving & Loading
 
 + (BOOL)autosavesInPlace
 {
     return YES;
 }
 
+-(BOOL)prepareSavePanel:(NSSavePanel *)savePanel {
+    NSDateFormatter *docDateformatter = [NSDateFormatter new];
+    docDateformatter.dateStyle = NSDateFormatterShortStyle;
+    NSDate   *now     = [NSDate date];
+    NSString *docName = [@"Noteable " stringByAppendingString: [docDateformatter stringFromDate:now]];
+    [savePanel setNameFieldStringValue: docName];
+    [savePanel setExtensionHidden:NO];
+    return YES;
+}
+
 - (NSData *)dataOfType:(NSString *)typeName error:(NSError **)outError
 {
-    // Insert code here to write your document to data of the specified type. If outError != NULL, ensure that you create and set an appropriate error when returning nil.
-    // You can also choose to override -fileWrapperOfType:error:, -writeToURL:ofType:error:, or -writeToURL:ofType:forSaveOperation:originalContentsURL:error: instead.
-    NSException *exception = [NSException exceptionWithName:@"UnimplementedMethod" reason:[NSString stringWithFormat:@"%@ is unimplemented", NSStringFromSelector(_cmd)] userInfo:nil];
-    @throw exception;
-    return nil;
+    DLog(@"Data Saving");
+    return [NSKeyedArchiver archivedDataWithRootObject: self.todoList];
+    [self updateChangeCount: NSChangeCleared];
 }
 
 - (BOOL)readFromData:(NSData *)data ofType:(NSString *)typeName error:(NSError **)outError
 {
-    // Insert code here to read your document from the given data of the specified type. If outError != NULL, ensure that you create and set an appropriate error when returning NO.
-    // You can also choose to override -readFromFileWrapper:ofType:error: or -readFromURL:ofType:error: instead.
-    // If you override either of these, you should also override -isEntireFileLoaded to return NO if the contents are lazily loaded.
-    NSException *exception = [NSException exceptionWithName:@"UnimplementedMethod" reason:[NSString stringWithFormat:@"%@ is unimplemented", NSStringFromSelector(_cmd)] userInfo:nil];
-    @throw exception;
-    return YES;
+    DLog(@"Data Read In");
+    self.todoList = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    if( self.todoList ){ return YES; }
+
+    *outError = [NSError errorWithDomain:NSInternalInconsistencyException code:666 userInfo: @{NSLocalizedDescriptionKey: @"Could not read data."}];
+    return NO;
+}
+
+#pragma mark Nil Targeted Methods / Actions here
+
+-(IBAction)debugDocEndDayChosen:(id)sender
+{
+    self.todoList = [JRDTodoList endTheDayList];
+    [self.docWindowController resetDocumentWithList: self.todoList];
+}
+
+-(IBAction)debugDocBeginDayChosen:(id)sender
+{
+    self.todoList = [JRDTodoList beginTheDayList];
+    [self.docWindowController resetDocumentWithList: self.todoList];
+
 }
 
 @end

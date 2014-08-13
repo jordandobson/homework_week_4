@@ -12,13 +12,18 @@
 		17B29C2B198F072E00D97C5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B29C2A198F072E00D97C5F /* main.m */; };
 		17B29C2F198F072E00D97C5F /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 17B29C2D198F072E00D97C5F /* Credits.rtf */; };
 		17B29C32198F072E00D97C5F /* JRDDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B29C31198F072E00D97C5F /* JRDDocument.m */; };
-		17B29C35198F072E00D97C5F /* JRDDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17B29C33198F072E00D97C5F /* JRDDocument.xib */; };
 		17B29C38198F072E00D97C5F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17B29C36198F072E00D97C5F /* MainMenu.xib */; };
 		17B29C3A198F072E00D97C5F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17B29C39198F072E00D97C5F /* Images.xcassets */; };
 		17B29C41198F072E00D97C5F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B29C40198F072E00D97C5F /* XCTest.framework */; };
 		17B29C42198F072E00D97C5F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B29C1E198F072E00D97C5F /* Cocoa.framework */; };
 		17B29C4A198F072E00D97C5F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17B29C48198F072E00D97C5F /* InfoPlist.strings */; };
 		17B29C4C198F072E00D97C5F /* HW4_jordandTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B29C4B198F072E00D97C5F /* HW4_jordandTests.m */; };
+		17B29C9B198F193C00D97C5F /* Daft-Punk-Art-Show-Guantlet-Gallery-07-1024x988.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17B29C9A198F193C00D97C5F /* Daft-Punk-Art-Show-Guantlet-Gallery-07-1024x988.jpg */; };
+		17B29C9F198F197200D97C5F /* JRDWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B29C9D198F197200D97C5F /* JRDWindowController.m */; };
+		17B29CA0198F197200D97C5F /* JRDWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17B29C9E198F197200D97C5F /* JRDWindowController.xib */; };
+		17B29CA61990BD4600D97C5F /* JRDTodoList.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B29CA51990BD4600D97C5F /* JRDTodoList.m */; };
+		17B29CA91990C6F900D97C5F /* JRDTodoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B29CA81990C6F900D97C5F /* JRDTodoItem.m */; };
+		17C43993199B28A300EA9A82 /* JRDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C43992199B28A300EA9A82 /* JRDAppDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +49,6 @@
 		17B29C2E198F072E00D97C5F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		17B29C30198F072E00D97C5F /* JRDDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRDDocument.h; sourceTree = "<group>"; };
 		17B29C31198F072E00D97C5F /* JRDDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRDDocument.m; sourceTree = "<group>"; };
-		17B29C34198F072E00D97C5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/JRDDocument.xib; sourceTree = "<group>"; };
 		17B29C37198F072E00D97C5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		17B29C39198F072E00D97C5F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		17B29C3F198F072E00D97C5F /* HW4_jordandTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HW4_jordandTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +56,16 @@
 		17B29C47198F072E00D97C5F /* HW4_jordandTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HW4_jordandTests-Info.plist"; sourceTree = "<group>"; };
 		17B29C49198F072E00D97C5F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		17B29C4B198F072E00D97C5F /* HW4_jordandTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HW4_jordandTests.m; sourceTree = "<group>"; };
+		17B29C9A198F193C00D97C5F /* Daft-Punk-Art-Show-Guantlet-Gallery-07-1024x988.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Daft-Punk-Art-Show-Guantlet-Gallery-07-1024x988.jpg"; sourceTree = "<group>"; };
+		17B29C9C198F197200D97C5F /* JRDWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRDWindowController.h; sourceTree = "<group>"; };
+		17B29C9D198F197200D97C5F /* JRDWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRDWindowController.m; sourceTree = "<group>"; };
+		17B29C9E198F197200D97C5F /* JRDWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JRDWindowController.xib; sourceTree = "<group>"; };
+		17B29CA41990BD4600D97C5F /* JRDTodoList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRDTodoList.h; sourceTree = "<group>"; };
+		17B29CA51990BD4600D97C5F /* JRDTodoList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRDTodoList.m; sourceTree = "<group>"; };
+		17B29CA71990C6F900D97C5F /* JRDTodoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRDTodoItem.h; sourceTree = "<group>"; };
+		17B29CA81990C6F900D97C5F /* JRDTodoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRDTodoItem.m; sourceTree = "<group>"; };
+		17C43991199B28A300EA9A82 /* JRDAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRDAppDelegate.h; sourceTree = "<group>"; };
+		17C43992199B28A300EA9A82 /* JRDAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRDAppDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +92,7 @@
 		17B29C12198F072E00D97C5F = {
 			isa = PBXGroup;
 			children = (
+				17B29C9A198F193C00D97C5F /* Daft-Punk-Art-Show-Guantlet-Gallery-07-1024x988.jpg */,
 				17B29C24198F072E00D97C5F /* HW4_jordand */,
 				17B29C45198F072E00D97C5F /* HW4_jordandTests */,
 				17B29C1D198F072E00D97C5F /* Frameworks */,
@@ -117,10 +132,13 @@
 		17B29C24198F072E00D97C5F /* HW4_jordand */ = {
 			isa = PBXGroup;
 			children = (
+				17C43994199B28AD00EA9A82 /* Base */,
+				17EC0121199B700A00175E76 /* Models */,
 				17B29C30198F072E00D97C5F /* JRDDocument.h */,
 				17B29C31198F072E00D97C5F /* JRDDocument.m */,
-				17B29C33198F072E00D97C5F /* JRDDocument.xib */,
-				17B29C36198F072E00D97C5F /* MainMenu.xib */,
+				17B29C9C198F197200D97C5F /* JRDWindowController.h */,
+				17B29C9D198F197200D97C5F /* JRDWindowController.m */,
+				17B29C9E198F197200D97C5F /* JRDWindowController.xib */,
 				17B29C39198F072E00D97C5F /* Images.xcassets */,
 				17B29C25198F072E00D97C5F /* Supporting Files */,
 			);
@@ -155,6 +173,27 @@
 				17B29C48198F072E00D97C5F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		17C43994199B28AD00EA9A82 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				17C43991199B28A300EA9A82 /* JRDAppDelegate.h */,
+				17C43992199B28A300EA9A82 /* JRDAppDelegate.m */,
+				17B29C36198F072E00D97C5F /* MainMenu.xib */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		17EC0121199B700A00175E76 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				17B29CA71990C6F900D97C5F /* JRDTodoItem.h */,
+				17B29CA81990C6F900D97C5F /* JRDTodoItem.m */,
+				17B29CA41990BD4600D97C5F /* JRDTodoList.h */,
+				17B29CA51990BD4600D97C5F /* JRDTodoList.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,11 +273,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17B29C35198F072E00D97C5F /* JRDDocument.xib in Resources */,
 				17B29C3A198F072E00D97C5F /* Images.xcassets in Resources */,
 				17B29C29198F072E00D97C5F /* InfoPlist.strings in Resources */,
 				17B29C2F198F072E00D97C5F /* Credits.rtf in Resources */,
+				17B29CA0198F197200D97C5F /* JRDWindowController.xib in Resources */,
 				17B29C38198F072E00D97C5F /* MainMenu.xib in Resources */,
+				17B29C9B198F193C00D97C5F /* Daft-Punk-Art-Show-Guantlet-Gallery-07-1024x988.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +297,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17B29CA61990BD4600D97C5F /* JRDTodoList.m in Sources */,
+				17C43993199B28A300EA9A82 /* JRDAppDelegate.m in Sources */,
 				17B29C2B198F072E00D97C5F /* main.m in Sources */,
+				17B29C9F198F197200D97C5F /* JRDWindowController.m in Sources */,
+				17B29CA91990C6F900D97C5F /* JRDTodoItem.m in Sources */,
 				17B29C32198F072E00D97C5F /* JRDDocument.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,14 +339,6 @@
 				17B29C2E198F072E00D97C5F /* en */,
 			);
 			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
-		17B29C33198F072E00D97C5F /* JRDDocument.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				17B29C34198F072E00D97C5F /* Base */,
-			);
-			name = JRDDocument.xib;
 			sourceTree = "<group>";
 		};
 		17B29C36198F072E00D97C5F /* MainMenu.xib */ = {
@@ -479,6 +515,7 @@
 				17B29C51198F072E00D97C5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		17B29C52198F072E00D97C5F /* Build configuration list for PBXNativeTarget "HW4_jordandTests" */ = {
 			isa = XCConfigurationList;
@@ -487,6 +524,7 @@
 				17B29C54198F072E00D97C5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
